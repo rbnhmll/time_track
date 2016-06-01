@@ -23,4 +23,5 @@ A time tracking app for small business
 	- Date range
 
 ## Controllers
+
 ## Views
