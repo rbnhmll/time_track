@@ -20,7 +20,7 @@ A time tracking app for small business
 
 * Department
 	* belongs_to :organization
-	* Has many Users
+	* has_many :users
 	- Department name
 
 * User
