@@ -15,23 +15,23 @@ A time tracking app for small business
 
 ## Models
 * Orginization
-	* Has many departments
+	* has_many :departments
 	- Origination name
 
 * Department
-	* Belongs to Organization
+	* belongs_to :organization
 	* Has many Users
 	- Department name
 
 * User
-	* Has many timecards
-	* Belongs to Department
+	* has_many :timecards
+	* belongs_to :department
 	- Name
 	- password
 	- Approver(?)
 
 * Timecard
-	* Belongs to User
+	* belongs_to :user
 	- Period start
 	- Period end
 	- Status
@@ -43,6 +43,7 @@ A time tracking app for small business
 	- Approved by
 
 * InviteUser
+	* belongs_to :user
 	- Invite token
 	- Temp password
 
