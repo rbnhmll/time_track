@@ -29,6 +29,7 @@ A time tracking app for small business
 	- Name
 	- password
 	- Approver(?)
+	- Employee number (optional)
 
 * Timecard
 	* belongs_to :user
@@ -42,10 +43,11 @@ A time tracking app for small business
 	- Date submitted
 	- Approved by
 
-* InviteUser
+* User_Invite
 	* belongs_to :user
 	- Invite token
 	- Temp password
+	- Approver
 
 ## Controllers
 
