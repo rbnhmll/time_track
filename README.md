@@ -14,13 +14,37 @@ A time tracking app for small business
 * Can decide when the work week starts, based on pay period
 
 ## Models
+* Orginization
+	* Has many departments
+	- Origination name
+
+* Department
+	* Belongs to Organization
+	* Has many Users
+	- Department name
+
 * User
+	* Has many timecards
+	* Belongs to Department
 	- Name
 	- password
+	- Approver(?)
 
 * Timecard
-	- Start day
-	- Date range
+	* Belongs to User
+	- Period start
+	- Period end
+	- Status
+	- Project
+	- Project Type
+	- hours per day, individually
+	- Total hours
+	- Date submitted
+	- Approved by
+
+* InviteUser
+	- Invite token
+	- Temp password
 
 ## Controllers
 
