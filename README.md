@@ -2,7 +2,7 @@
 A time tracking app for small business
 
 ## Functionality
-* OTL by Oracle sucks, and I think I can do one better.
+* Oracle Time sucks, and I think I can do one better.
 * User can manually mark down how many hours they have worked per day.
 * Total weekly hours are tabulated, and saved.
 * Hours can be sent off to manager to be approved
@@ -14,9 +14,11 @@ A time tracking app for small business
 * Can decide when the work week starts, based on pay period
 
 ## Models
-* Orginization
+* Organization
 	* has_many :departments
+	* has_many :users
 	- Origination name
+	- Start Date
 
 * Department
 	* belongs_to :organization
@@ -24,12 +26,19 @@ A time tracking app for small business
 	- Department name
 
 * User
+	* has_one :profile
 	* has_many :timecards
 	* belongs_to :department
-	- Name
-	- password
+	* belongs_to :organization
+	- password (to be set randomly if by approver)
 	- Approver(?)
 	- Employee number (optional)
+
+* Profile
+	* belongs_to :user
+	- first_name
+	- last_name
+	- company
 
 * Timecard
 	* belongs_to :user
@@ -41,13 +50,19 @@ A time tracking app for small business
 	- hours per day, individually
 	- Total hours
 	- Date submitted
-	- Approved by
+	- Approved by (user)
 
 * User_Invite
 	* belongs_to :user
-	- Invite token
+	- Invite Token
 	- Temp password
 	- Approver
+
+* Reminders
+	* belongs_to :user
+	- Message
+	- Send date
+	- Email to send to
 
 ## Controllers
 
