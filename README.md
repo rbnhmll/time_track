@@ -33,12 +33,12 @@ A time tracking app for small business
 	- password (to be set randomly if by approver)
 	- Approver(?)
 	- Employee number (optional)
+	- company
 
 * Profile
 	* belongs_to :user
 	- first_name
 	- last_name
-	- company
 
 * Timecard
 	* belongs_to :user
