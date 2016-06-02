@@ -26,15 +26,15 @@ A time tracking app for small business
 	* belongs_to :department
 	* belongs_to :organization
 	- password (to be set randomly if by approver)
-	- Approver(?)
-	- Employee number (optional)
-	- company
 
 * Profile
 	* belongs_to :user
 	- first_name
 	- last_name
 	- department
+	- Approver(?)
+	- Employee number (optional)
+	- company
 
 * Timecard
 	* belongs_to :user

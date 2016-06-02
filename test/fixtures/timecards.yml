@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  start_date: 2016-06-02
+  end_date: 2016-06-02
+  status: false
+  project: MyString
+  pproject_type: MyString
+  total_hours: 1
+  submit_date: 2016-06-02 11:48:55
+  approved_by: MyString
+
+two:
+  user_id: 1
+  start_date: 2016-06-02
+  end_date: 2016-06-02
+  status: false
+  project: MyString
+  pproject_type: MyString
+  total_hours: 1
+  submit_date: 2016-06-02 11:48:55
+  approved_by: MyString
