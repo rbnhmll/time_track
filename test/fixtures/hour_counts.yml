@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  timecard_id: 1
+  day: 2016-06-02
+  hours: 1
+
+two:
+  timecard_id: 1
+  day: 2016-06-02
+  hours: 1

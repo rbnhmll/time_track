@@ -38,6 +38,8 @@ A time tracking app for small business
 
 * Timecard
 	* belongs_to :user
+	* has_many :dailycounts
+	- user_id
 	- Period start
 	- Period end
 	- Status
@@ -47,6 +49,12 @@ A time tracking app for small business
 	- Total hours
 	- Date submitted
 	- Approved by (user)
+
+* hour_count
+	* belongs_to :timecard
+	- timecard_id
+	- day:date
+	- hours:integer
 
 * User_Invite
 	* belongs_to :user
