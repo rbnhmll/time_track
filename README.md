@@ -16,7 +16,9 @@ A time tracking app for small business
 ## Models
 * Organization
 	* has_many :users
-	- Origination name
+	- Name
+	- Address
+	- website
 
 * User
 	* has_one :profile
