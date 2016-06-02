@@ -15,15 +15,9 @@ A time tracking app for small business
 
 ## Models
 * Organization
-	* has_many :departments
 	* has_many :users
 	- Origination name
 	- Start Date
-
-* Department
-	* belongs_to :organization
-	* has_many :users
-	- Department name
 
 * User
 	* has_one :profile
@@ -39,6 +33,7 @@ A time tracking app for small business
 	* belongs_to :user
 	- first_name
 	- last_name
+	- department
 
 * Timecard
 	* belongs_to :user
