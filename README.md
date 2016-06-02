@@ -20,14 +20,14 @@ A time tracking app for small business
 	- Address
 	- website
 
-* User
+* User (built)
 	* has_one :profile
 	* has_many :timecards
 	* belongs_to :department
 	* belongs_to :organization
 	- password (to be set randomly if by approver)
 
-* Profile
+* Profile (built)
 	* belongs_to :user
 	- first_name
 	- last_name
@@ -36,7 +36,7 @@ A time tracking app for small business
 	- Employee number (optional)
 	- company
 
-* Timecard
+* Timecard (built)
 	* belongs_to :user
 	* has_many :dailycounts
 	- user_id
@@ -50,7 +50,7 @@ A time tracking app for small business
 	- Date submitted
 	- Approved by (user)
 
-* hour_count
+* hour_count (built)
 	* belongs_to :timecard
 	- timecard_id
 	- day:date
