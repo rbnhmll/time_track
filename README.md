@@ -17,7 +17,6 @@ A time tracking app for small business
 * Organization
 	* has_many :users
 	- Origination name
-	- Start Date
 
 * User
 	* has_one :profile
