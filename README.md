@@ -19,9 +19,11 @@ A time tracking app for small business
 	- Indicates in their profile that they are an Admin
 	- This gives privileges to create/destroy organizations, invite users, and approve timecards
 * Invites are send to employees
-	- Option to send out multiple invites at once, using only emails
+	- Option to send out multiple invites at once, using only emails.
+	- New User is created, and a temporary password is generated. Password is included in the invite email.
 * Invite includes a randomized token, which associates with the invite.
 * Invitee already has a User created. Needs to reset password, create a profile. Invited users do not have admin privileges unless indicated in the invite.
+	- On first login, invite is destroyed and is no longer valid.
 	- Invited users cannot set up organizations, approve timecards or invite others.
 * User can create timecards, and select start date. Each additional timecard increments after that.
 * At end of week, user submits timecard, and email is sent to Admin for approval.
@@ -29,7 +31,7 @@ A time tracking app for small business
 * Once timecard is approved, User receives email.
 
 ## Models
-* Organization
+* Organization (built)
 	* has_many :users
 	- Name
 	- Address
@@ -71,11 +73,13 @@ A time tracking app for small business
 	- day:date
 	- hours:integer
 
-* User_Invite
+* Invite (built)
 	* belongs_to :user
-	- Invite Token
-	- Temp password
-	- Approver
+	- email
+	- Sender_id
+	- Recipient_id
+	- Token
+	- organization_id
 
 * Reminders
 	* belongs_to :user
