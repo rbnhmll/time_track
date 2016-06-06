@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160602160859) do
+ActiveRecord::Schema.define(version: 20160606183714) do
 
   create_table "hour_counts", force: :cascade do |t|
     t.integer  "timecard_id"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 20160602160859) do
     t.integer  "hours"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "invites", force: :cascade do |t|
+    t.string   "email"
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.string   "token"
+    t.integer  "organization_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "organizations", force: :cascade do |t|
