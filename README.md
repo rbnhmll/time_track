@@ -13,6 +13,21 @@ A time tracking app for small business
 	- Once approved, user receives an email.
 * Can decide when the work week starts, based on pay period
 
+## User flow
+* Administrator creates a User account
+* Administrator creates a profile
+	- Indicates in their profile that they are an Admin
+	- This gives privileges to create/destroy organizations, invite users, and approve timecards
+* Invites are send to employees
+	- Option to send out multiple invites at once, using only emails
+* Invite includes a randomized token, which associates with the invite.
+* Invitee already has a User created. Needs to reset password, create a profile. Invited users do not have admin privileges unless indicated in the invite.
+	- Invited users cannot set up organizations, approve timecards or invite others.
+* User can create timecards, and select start date. Each additional timecard increments after that.
+* At end of week, user submits timecard, and email is sent to Admin for approval.
+* Admin can see all timecards awaiting approval in approval dashboard (index).
+* Once timecard is approved, User receives email.
+
 ## Models
 * Organization
 	* has_many :users
