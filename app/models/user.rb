@@ -5,5 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 	has_one :profile, :dependent => :destroy
+	has_many :timecards
+	has_many :invites
 	belongs_to :organization
 end

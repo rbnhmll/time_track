@@ -55,7 +55,7 @@ A time tracking app for small business
 
 * Timecard (built)
 	* belongs_to :user
-	* has_many :dailycounts
+	* has_many :hour_counts
 	- user_id
 	- Period start
 	- Period end
@@ -81,7 +81,7 @@ A time tracking app for small business
 	- Token
 	- organization_id
 
-* Reminders
+* Reminders (later)
 	* belongs_to :user
 	- Message
 	- Send date
