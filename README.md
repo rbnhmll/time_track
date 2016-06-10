@@ -63,8 +63,8 @@ A time tracking app for small business
 	- Project
 	- Project Type
 	- hours per day, individually
-	- Total hours
-	- Date submitted
+	- total_hours
+	- submit_date
 	- Approved by (user)
 
 * hour_count (built)
