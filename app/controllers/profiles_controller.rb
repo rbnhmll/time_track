@@ -1,8 +1,6 @@
 class ProfilesController < ApplicationController
-before_action :authenticate_user!
-
-  def new
-  end
+  before_action :set_profile, only: [:show, :edit, :update, :destroy, :finish_signup]
+  before_action :authenticate_user!
 
   def create
   end

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :organizations
   devise_for :users
+  resources :organizations
   resources :profiles
   resources :timecards
   resources :hour_counts

@@ -8,4 +8,6 @@ class User < ActiveRecord::Base
 	has_many :timecards
 	has_many :invites
 	belongs_to :organization
+
+	accepts_nested_attributes_for :profile
 end
